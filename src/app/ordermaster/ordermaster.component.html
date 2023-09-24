@@ -1,0 +1,16 @@
+
+<div class="py-5 d ">
+    SELECT CATEGORY :
+    <select class="m-auto d" #catDDL [(ngModel)]="catid">
+        <option *ngFor = "let item of categorylist" [value]="item.id">
+        {{item.name}}
+        </option>
+    </select>
+</div>
+<app-orderdetail [selectcatid]="catid" (totalPriceChanged) = "onTotalPriceChanged($event)">
+
+</app-orderdetail>
+<hr>
+<div class="m">
+    YOUR TOTAL PRICE: {{totalOrderPriceInMaster}} POUND<br><br>
+</div>

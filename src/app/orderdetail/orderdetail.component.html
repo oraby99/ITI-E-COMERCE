@@ -1,0 +1,44 @@
+ <div class="bg-secondary">
+    <br>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="bg-dark text-white">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Availble quantity</th>
+          <th>Price</th>
+          <th>Needed qunatity</th>
+          <th>DETAILS</th>
+          <th>Add to Cart</th>
+        </tr>
+      </thead>
+
+       <tbody>
+   
+         <tr *ngFor="let prd of getcatid()">
+          <td>{{prd.id}}</td>
+          <td>{{prd.name}}</td>
+          <td>{{prd.quantity}}</td>
+          <td>{{prd.price}}</td>  
+          <td> <input type="number" #f></td>
+         <td><a href="{{'/products/'+prd.id}}" class="btn btn-dark" >view detail </a></td> 
+    
+          <td><button class="btn btn-dark" (click)= "updateprice(prd.price,f.value)">
+            BUY-NOW ..!
+          </button>
+        </td> 
+        </tr>
+       
+      </tbody> 
+    </table>
+    <br>
+  </div>
+ 
+<!-- 
+  <td><input #pCount type="number"></td>
+  <td><a href="{{'/Product/'+prd.ID}}" class="btn btn-primary">View details</a></td> 
+  <td><a [routerLink]="['/Product/', prd.ID]" class="btn btn-primary">View details</a></td>
+  <td><button class="btn btn-primary" (click)="viewPrdDetails(prd.ID)">View details</button></td>
+  <td><button class="btn btn-primary" (click)="updateTotalPrice(prd.Price, pCount.value)">Add</button></td>  -->
+
+ 

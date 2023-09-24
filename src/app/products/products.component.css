@@ -1,0 +1,83 @@
+body {
+    background-color: gray;
+}
+.item {
+    width: 20%;
+    float: left;
+    position: relative;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: teal;
+}
+.item img {
+    width: 100%;
+}
+.clr1 {
+    clear: both;
+}
+header {
+    background-size: cover;
+    background-position: center center;
+}
+.icon {
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    border-radius: 50%;
+}
+.col {
+    color: #ff206e;
+}
+#pro {
+    font-family: 'Segoe UI light';
+}
+.title h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: darkgray;
+}
+.title h3 {
+    font-size: 30px;
+    font-weight: 900;
+    color: darkcyan;
+}
+.bg-w {
+    background-color: brown;
+    color: whitesmoke;
+}
+.bg-in {
+    background-color: gray;
+    color: whitesmoke;
+}
+.bg-inf {
+    background-color: black;
+    color: white;
+}
+.inner:hover img {
+    border-radius: 50%;
+}
+.inner img {
+    transition: all 1s;
+}
+@media screen and (max-width: 570px) {
+    .item {
+        width: 100%;
+   }
+}
+@media screen and (min-width: 571px) and (max-width: 767px) {
+    .item {
+        width: 50%;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .item {
+        width: 33.333%;
+   }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .item {
+        width: 25%;
+   }
+}

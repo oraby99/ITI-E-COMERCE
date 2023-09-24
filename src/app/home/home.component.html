@@ -1,0 +1,37 @@
+
+
+
+<br><br><br>
+<h2>SEE MY EXPERIENCE</h2>
+<div class="g"><button class="btn btn-dark g"  (click)="toggle()">SHOW/HIDE</button></div>
+
+<br><br><br>
+<!-- <div [hidden] ='!isServicesDisplayed'> -->
+    <div *ngIf ='!isServicesDisplayed'>
+        
+<h2 >EXPERIENCE</h2>
+<ul >
+    <li  *ngFor="let item of companydetail.services">{{item}}</li>
+</ul>
+</div>
+<!-- <h2 class="text-center">LIST OF MAIN PRODUCTS</h2> -->
+
+<!-- <table class="table" [hidden] ='isServicesDisplayed'>
+    <thead >
+        <tr class="bg-dark text-white">
+            <th>ID :</th>
+            <th>NAME :</th>
+            <th>QUANTITY :</th>
+            <th>PRICE :</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor ="let product of mainproduct" [ngStyle]="{'background':'gray'}">
+            <td appHighligt>{{product.id}}</td>
+            <td appHighligt>{{product.name}}</td>
+            <td appHighligt>{{product.quantity}}</td>
+            <td appHighligt>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table> -->
+

@@ -1,0 +1,44 @@
+<div>
+      <form #frm="ngForm" (ngSubmit)="addProduct()"> 
+      <div class="form-group"><br>
+        <label for="prdName">Name</label>
+        <input type="text" #prdName="ngModel" [class.is-invalid]="prdName.invalid && prdName.touched" [class.is-valid]="prdName.valid"[(ngModel)]="prd.name" required minlength="3" name="Name" id="prdName" class="form-control" placeholder="" aria-describedby="helpId">
+        <small [hidden]="prdName.valid || prdName.untouched" id="helpId" class="text-muted">Name must be more than 3 letters</small>
+      </div>
+      <div class="form-group">
+        <label for="prdQuantity">Quantity</label><br>
+        <input type="number" [(ngModel)]="prd.quantity" required min="1" name="Quantity" id="prdQuantity" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Help text</small>
+      </div>
+      <div class="form-group">
+        <label for="prdPrice">Price</label><br>
+        <input type="number" [(ngModel)]="prd.price" name="Price" required min="1" id="prdPrice" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Help text</small>
+      </div>
+      <button type="submit" [disabled]="frm.invalid" class="btn btn-primary" click="addProduct()" >ADD PRODUCT</button><br><br>
+      <button type="reset"class="btn btn-primary">ADD NEW</button>
+    </form> 
+  </div><br>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="bg-dark text-white">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Availble quantity</th>
+        <th>Price</th>
+      
+      </tr>
+    </thead>
+    <tbody click="addProduct()">
+      <tr >
+        <td>{{prd.id}}</td>
+        <td>{{prd.name}}</td>
+        <td>{{prd.quantity}}</td>
+        <td>{{prd.price}}</td>
+      </tr>
+    </tbody>
+    
+  </table> 
+  
+ 
+  

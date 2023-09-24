@@ -1,0 +1,16 @@
+<h2 class="text-center">VIEW PRODUCT DETAIL</h2>
+<div class="card m-auto bg-dark" style="width: 18rem; ">
+    <img class="card-img-top" src="https://picsum.photos/300/200">
+    <div class="card-body">
+        <h5 class="card-title ">Name :{{prd.name}}</h5>
+        <div class="card-text">
+            <div>ID : {{prd.id}}</div><br>
+            <div> PRICE :{{prd.price}}</div><br>
+            <div> QUANTITY :{{prd.quantity}}</div><br>
+        </div> 
+        <button class=" btn-dark" (click)="goBack()">Go back</button>
+    </div>
+</div>
+<!-- <button type="button" class="btn btn-primary" (click)="changePrdID()">Change Product ID</button>  -->
+
+   
